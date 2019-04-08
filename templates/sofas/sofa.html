@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Детали товара -->
+<div class="single-product-area section-padding-100 clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-50">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Назад к выбору</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ sofas.name }}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="single_product_thumb">
+                    {% for image_item in sofas.sofaimage_set.all %}
+                        <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="gallery_img" href="{{ image_item.image.url }}">
+                                        <img class="d-block w-100" src="{{ image_item.image.url }}" alt="Нажмите для детального просмотра">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="single_product_desc">
+                    <!-- Полные данные о товаре -->
+                    <div class="product-meta-data">
+                        <div class="line"></div>
+                        <p class="product-price">{{ sofas.price }} RUB</p>
+                        <a href="{% url 'sofa' sofas.id %}">
+                            <h6>{{ sofas.name }}</h6>
+                        </a>
+                    </div>
+                    <div class="short_overview my-5">
+                        <p>{{ sofas.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Конец секции -->
+
+{% endblock %}

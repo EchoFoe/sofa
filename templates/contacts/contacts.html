@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="single-product-area section-padding-100 clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-50">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Назад на главную</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="single_product_desc">
+                    <!-- Информация о контактах -->
+                    <div class="product-meta-data">
+                        <div class="line"></div>
+                        <p class="product-price fa fa-send"> {{ contact.email }}</p>
+                    </div>
+                    <hr>
+                    <div class="product-meta-data">
+                        <h6 class="product-price fa fa-mobile-phone"> {{ contact.phone }}</h6>
+                    </div>
+                    <div class="short_overview my-5">
+                        <p>{{ contact.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

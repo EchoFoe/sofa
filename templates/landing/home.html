@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Вся мебель из категории №1 -->
+<div class="products-catagories-area clearfix">
+    <div class="amado-pro-catagory clearfix">
+        <form class="dl-horizontal form-group">
+            {% for  sofa_image in sofas_images_1  %}
+                {% include 'sofas/sofa_item.html' %}
+            {% endfor %}
+        </form>
+    </div>
+</div>
+<!-- Конец цикла -->
+
+{#<!-- Вся мебель из категории №1 -->#}
+{#<div class="amado_product_area section-padding-100">#}
+{#    <div class="container-fluid">#}
+{#        <div class="row d-lg-flex">#}
+{#            <div class="col-12 col-sm-6 col-md-12 col-xl-6">#}
+{#                <div class="single-product-wrapper">#}
+{#                    <form class="dl-horizontal form-group">#}
+{#                        {% for  sofa_image in sofas_images_1  %}#}
+{#                            {% include 'sofas/sofa_item.html' %}#}
+{#                        {% endfor %}#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<!-- Конец цикла -->#}
+
+{% endblock content %}

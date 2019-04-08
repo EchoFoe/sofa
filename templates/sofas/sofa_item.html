@@ -1,0 +1,38 @@
+{% block content %}
+{% load static %}
+
+
+<div class="single-products-catagory clearfix">
+    <a id="Sofa.id" href="{% url 'sofa' sofa_image.Sofa.id %}">
+        <img src="{{ sofa_image.image.url }}" alt="">
+    </a>
+    <!-- Контент с данными с бд -->
+    <div class="section-padding-10-50">
+        <div class="line"></div>
+{#        <p>Цена {{ sofa_image.Sofa.price }}</p>#}
+        <a id="Sofa.id" href="{% url 'sofa' sofa_image.Sofa.id %}">
+            <h4>{{ sofa_image.Sofa.name }}</h4>
+        </a>
+{#        <h4>{{ sofa_image.Sofa.description|truncatechars_html:40 }}</h4>#}
+    </div>
+</div>
+<!-- Конец итема -->
+
+{#<!-- Итем, в который грузятся данные о мебели -->#}
+{#<div class="single-products-catagory clearfix section-padding-50">#}
+{#    <a id="Sofa.id" href="{% url 'sofa' sofa_image.Sofa.id %}">#}
+{#        <img src="{{ sofa_image.image.url }}" alt="">#}
+{#    </a>#}
+{#    <div class="product-description d-flex align-items-center justify-content-between">#}
+{#        <!-- Данные об изделии (имя) -->#}
+{#        <div class="product-meta-data">#}
+{#            <div class="line"></div>#}
+{#            <a id="Sofa.id" href="{% url 'sofa' sofa_image.Sofa.id %}">#}
+{#                <h6>{{ sofa_image.Sofa.name }}</h6>#}
+{#            </a>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<!-- Конец итема -->#}
+
+{% endblock %}

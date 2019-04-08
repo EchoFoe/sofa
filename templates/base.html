@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Фабрика мебели | Вдохновение</title>
+    <link rel="shortcut icon" href="../static/images/core-img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/core-style.css">
+
+</head>
+
+<body>
+
+{#<div class="search-wrapper section-padding-100">#}
+{#    <div class="search-close">#}
+{#        <i class="fa fa-close" aria-hidden="true"></i>#}
+{#    </div>#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-12">#}
+{#                <div class="search-content">#}
+{#                    <form action="#" method="get">#}
+{#                        <input type="search" name="search" id="search" placeholder="Введите слово для поиска, например, диваны...">#}
+{#                        <button type="submit"><img src="../static/images/core-img/search.png" alt=""></button>#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+<div class="main-content-wrapper d-flex clearfix">
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock content %}
+</div>
+    {% include 'footer.html' %}
+
+<!-- Прелоуд -->
+<div id="preloader">
+    <div id="loader">
+    </div>
+</div>
+    <script src="../static/js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/active.js"></script>
+
+</body>
+</html>
